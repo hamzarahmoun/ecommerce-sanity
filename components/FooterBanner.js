@@ -1,3 +1,5 @@
+import { useRouter } from 'next/router';
+import { useStateContext } from '../context/StateContext';
 import { urlFor } from '../lib/client'
 import Link from 'next/link'
 import React from 'react'
@@ -5,6 +7,8 @@ import React from 'react'
 export const FooterBanner = ({ footerBanner: {discount,largeText1,largeText2,saleTime,
   smallText,midText,product,buttonText,image,desc}
 }) => {
+
+  
   return (
     <div className='footer-banner-container'>
       <div className='banner-desc'>
@@ -22,8 +26,13 @@ export const FooterBanner = ({ footerBanner: {discount,largeText1,largeText2,sal
           <p>{smallText}</p>
           <h3>{midText}</h3>
           <p>{desc}</p>
-          <Link href={`/product/${product}`}>
-            <button type='button'> {buttonText}</button>
+          <Link href={`/product/${product}`}
+          >
+            <button type='button'
+
+            > {buttonText}
+            
+            </button>
 
           </Link>
 

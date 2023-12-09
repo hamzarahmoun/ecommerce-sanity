@@ -12,8 +12,8 @@ const Home = ({ products, bannerData }) => {
         <p>Speakers of my variations</p>
       </div>
       <div className="products-container">
-        {products?.map((product, index) => <Product
-          key={index}
+        {products?.map((product, i) => <Product
+          key={i}
           product={product} />
         )}
       </div>
