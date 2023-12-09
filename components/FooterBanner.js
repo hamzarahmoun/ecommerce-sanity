@@ -38,7 +38,8 @@ export const FooterBanner = ({ footerBanner: {discount,largeText1,largeText2,sal
 
         </div>
         <img 
-          src={urlFor(image)} 
+          src={urlFor(image && image)}
+         
           className='footer-banner-image'
         />
 
